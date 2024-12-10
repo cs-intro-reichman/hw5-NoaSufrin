@@ -129,7 +129,7 @@ public class Scrabble {
 			if (equalsWords(input, ".")) {
 				break;
 			}
-			if (MyString.subsetOf(input, hand)) {
+			if (!MyString.subsetOf(input, hand)) {
 				System.out.println("“Invalid choice. Try again”");
 			} else if (!isWordInDictionary(input)) {
 				System.out.println("No such word in the dictionary. Try again.");
@@ -165,9 +165,9 @@ public class Scrabble {
 			//// Replace the following break statement with code
 			//// that completes the game playing loop
 			
-			if (!equalsWords(input, "n") && !equalsWords(input, "e") && equalsWords(input, "r")) {
+			if (!equalsWords(input, "n") && !equalsWords(input, "e")) {
 				System.out.println("Invalid command.");
-				System.out.println( "Enter n to deal a new hand, r to replay the last hand, or e to end game:");
+				System.out.println( " Enter n to deal a new hand, or e to end the game:");
 			}
 			else if (equalsWords(input, "n")) {
 				Scrabble.playHand(input);
