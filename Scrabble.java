@@ -130,7 +130,7 @@ public class Scrabble {
 				break;
 			}
 			if (!MyString.subsetOf(input, hand)) {
-				System.out.println("“Invalid word. Try again”");
+				System.out.println("Invalid word. Try again");
 			} else if (!isWordInDictionary(input)) {
 				System.out.println("No such word in the dictionary. Try again.");
 			} else {
@@ -170,7 +170,8 @@ public class Scrabble {
 				System.out.println( " Enter n to deal a new hand, or e to end the game:");
 			}
 			else if (equalsWords(input, "n")) {
-				Scrabble.playHand(input);
+				String hand = createHand();
+				playHand(hand);
 			}
 			else if (equalsWords(input, "e")) {
 				break;
