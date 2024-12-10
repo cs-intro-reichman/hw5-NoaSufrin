@@ -118,10 +118,7 @@ public class Scrabble {
 		In in = new In();
 		while (hand.length() > 0) {
 			System.out.println("Current Hand: " + MyString.spacedString(hand));
-			if (hand.length() > 0) {
-				System.out.println("Enter a word, or '.' to finish playing this hand:");
-			}
-			//System.out.println("Enter a word, or '.' to finish playing this hand:");
+			System.out.println("Enter a word, or '.' to finish playing this hand:");
 			// Reads the next "token" from the keyboard. A token is defined as a string of 
 			// non-whitespace characters. Whitespace is either space characters, or  
 			// end-of-line characters.
@@ -141,8 +138,9 @@ public class Scrabble {
 				handScore += wordScore;
 				System.out.println(input + " earned " + wordScore + " points. Score: " + handScore + " points");
 				hand = MyString.remove(hand, input);
+				System.out.println();
 			}
-			System.out.println();
+			
 		}
 		if (hand.length() == 0) {
 	        System.out.println("Ran out of letters. Total score: " + handScore + " points");
